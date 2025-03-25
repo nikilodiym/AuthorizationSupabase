@@ -19,6 +19,7 @@ public class DatabaseProvider(string connectionString)
             connection.ExecuteAsync(DbCommands.CreateDbCommandWithNotExists(dbName));
         }
         catch(SqlException e)
+        
         {
             throw new Exception(e.Message);
         }
