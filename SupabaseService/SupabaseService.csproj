@@ -4,16 +4,12 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>WPFIntroPlusDBMy</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Repository\" />
-      <Folder Include="UseCase\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\DatabaseService\DatabaseService.csproj" />
+      <PackageReference Include="Dapper" Version="2.1.66" />
+      <PackageReference Include="Supabase" Version="1.1.1" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
     </ItemGroup>
 
 </Project>
