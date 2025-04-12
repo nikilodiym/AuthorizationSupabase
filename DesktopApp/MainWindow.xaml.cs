@@ -1,30 +1,20 @@
 ﻿using System.Windows;
 
-namespace DesktopApp
+namespace DesktopApp;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    private SupabaseService.SupabaseService.SupabaseService _provider;
+    public MainWindow()
     {
-        SupabaseService.SupabaseService.SupabaseService supabaseService;
-        public MainWindow()
-        {
-            InitializeComponent();
-            supabaseService = new SupabaseService.SupabaseService.SupabaseService();
-        }
-        private async void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            var session = await supabaseService.Register(UsernameBox.Text, PasswordBox.Password);
-            
-            if (session != null)
-            {
-                // Registration successful
-                supabaseService.SetAuthUser();
-                MessageBox.Show("Registration successful!");
-            }
-            else
-            {
-                // Registration failed
-                MessageBox.Show("Registration failed!");
-            }
-        }
+        InitializeComponent();
+        _provider = new SupabaseService.SupabaseService.SupabaseService();
+    }
+
+    private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+    {
+        // Placeholder logic for when the window is loaded
+        MessageBox.Show("MainWindow loaded successfully!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+        MainWindowFrame.Navigate(new Pages.SignInPage(_provider));
     }
 }
