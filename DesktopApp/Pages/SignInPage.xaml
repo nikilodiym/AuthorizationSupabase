@@ -13,11 +13,12 @@
                 <GradientStop Color="LightPink" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        
 
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBox Name="UsernameBox" Width="200" Height="30" Margin="10"/>
             <PasswordBox Name="PasswordBox" Width="200" Height="30" Margin="10"/>
-
+            
             <Button Content="Register" Width="120" Height="40" Click="RegisterButton_Click"
                     Background="White" Foreground="Black" BorderThickness="0"
                     FontSize="14" FontWeight="Bold" Cursor="Hand">

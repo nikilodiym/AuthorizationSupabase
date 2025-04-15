@@ -15,6 +15,6 @@ public partial class MainWindow : Window
     {
         // Placeholder logic for when the window is loaded
         MessageBox.Show("MainWindow loaded successfully!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
-        MainWindowFrame.Navigate(new Pages.SignInPage(_provider));
+        //MainWindowFrame.Navigate(new Pages.SignInPage(_provider));
     }
 }

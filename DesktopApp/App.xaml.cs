@@ -9,4 +9,5 @@ namespace DesktopApp;
 /// </summary>
 public partial class App : Application
 {
+    
 }
